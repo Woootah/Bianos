@@ -1,0 +1,67 @@
+/* Imports */
+@import url(https://db.onlinewebfonts.com/c/0d7c90bf2d5c8dcc4fa27a5ba6cbad81?family=Mango+Grotesque);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* Customs */
+:root {
+    --white: #ece9e3; 
+    --red: #F4430F;
+    --blue: #87B2C4; 
+    --black: #333333; 
+    --font-1: 'Mango Grotesque'; 
+    --font-2: 'Poppins'; 
+}
+
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--font-2);
+    font-weight: 400;
+    color: var(--red);
+    padding: 2rem 4rem; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlinks li {
+    display: inline-block;
+    margin-right: 0.5rem; 
+}
+
+.navlinks li a {
+    text-decoration: none;
+    color: var(--red); 
+    font-weight: 500;
+}
+
+.logo {
+    margin-right: 5rem;
+}
+
+.logo img {
+    width: 200px; 
+}
+
+.navicons {
+    list-style-type: none;
+}
+
+.navicons li {
+    width: 25px; 
+    display: inline-block;
+    margin-left: 1rem; 
+}
+
+.line {
+    margin-top: 1rem; 
+    border: 1px solid var(--red); 
+}
