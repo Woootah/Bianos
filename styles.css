@@ -1,67 +1,137 @@
 /* Imports */
 @import url(https://db.onlinewebfonts.com/c/0d7c90bf2d5c8dcc4fa27a5ba6cbad81?family=Mango+Grotesque);
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 /* Customs */
 :root {
-    --white: #ece9e3; 
-    --red: #F4430F;
-    --blue: #87B2C4; 
-    --black: #333333; 
-    --font-1: 'Mango Grotesque'; 
-    --font-2: 'Poppins'; 
+  --white: #ece9e3;
+  --red: #f4430f;
+  --blue: #87b2c4;
+  --black: #333333;
+  --font-1: "Mango Grotesque";
+  --font-2: "Poppins";
 }
 
 * {
-    padding: 0;
-    margin: 0; 
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--white);
-    font-family: var(--font-2);
-    font-weight: 400;
-    color: var(--red);
-    padding: 2rem 4rem; 
+  background-color: var(--white);
+  font-family: var(--font-2);
+  font-weight: 400;
+  color: var(--red);
+  padding: 2rem 4rem;
+  position: relative; 
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navlinks li {
-    display: inline-block;
-    margin-right: 0.5rem; 
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 .navlinks li a {
-    text-decoration: none;
-    color: var(--red); 
-    font-weight: 500;
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 400;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.navlinks li a:hover {
+  font-style: italic;
+  color: var(--blue);
 }
 
 .logo {
-    margin-right: 5rem;
+  margin-right: 6rem;
 }
 
 .logo img {
-    width: 200px; 
+  width: 200px;
 }
 
 .navicons {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .navicons li {
-    width: 25px; 
-    display: inline-block;
-    margin-left: 1rem; 
+  width: 25px;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.navicons li svg {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.navicons li svg:hover {
+  color: var(--blue);
 }
 
 .line {
-    margin-top: 1rem; 
-    border: 1px solid var(--red); 
+  margin-top: 1rem;
+  border: 1px solid var(--red);
+}
+
+.banner-container {
+  width: 100%; 
+  /* border: 1px solid red;  */
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  margin-top: 2rem; 
+}
+
+.navbuttons {
+  width: 100%; 
+  height: 100%; 
+  /* border: 1px solid blue;  */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+}
+
+/* .navbuttons div {
+  border: 1px solid violet; 
+} */
+
+.slides {
+  max-width: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  transition: 1s ease-in-out; 
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem 2rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+  .navlinks {
+    display: none;
+  }
 }
