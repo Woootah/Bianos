@@ -1,0 +1,168 @@
+[
+    {
+        "img": "./imgs/pizzas/american.png", 
+        "title": "American",
+        "description": "All Pepperoni",  
+        "price": {
+            "small": 135, 
+            "large": 175
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/beefwarma.png", 
+        "title": "Beefwarma",
+        "description": "Shawarma Pizza with Beef, Tomatoes, Oniones & Cabbage",  
+        "price": {
+            "small": 135
+        },
+        "category": ["pizza", "bestseller"]
+    }, 
+    {
+        "img": "./imgs/pizzas/cheezy_mushroom.png", 
+        "title": "Cheesy Mushroom",
+        "description": "All Mushroom",  
+        "price": {
+            "small": 120, 
+            "large": 165
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/chicken_teriyaki.png", 
+        "title": "Chicken Teriyaki",
+        "description": "Chicken, Mushroom, Pineapple, Onions, Green & Red Bell Pepper",  
+        "price": {
+            "small": 170, 
+            "large": 220
+        }, 
+        "category": ["pizza", "bestseller"]
+    }, 
+    {
+        "img": "./imgs/pizzas/full_house.png", 
+        "title": "Full House",
+        "description": "Everything on it!",  
+        "price": {
+            "small": 265
+        }, 
+        "category": ["pizza", "bestseller"]
+    }, 
+    {
+        "img": "./imgs/pizzas/garden_special.png", 
+        "title": "Garden Special",
+        "description": "All Veggies pizza tapped with Mushroom, Pineapple, Black Olives, Onions, Tomatoes, Red & Green Bell Pepper",  
+        "price": {
+            "small": 125, 
+            "large": 170
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/garlic_cheese.png", 
+        "title": "Garlic & Cheese",
+        "description": "Pizza tapped with super delicious melted Cheese and Garlic flavor",  
+        "price": {
+            "small": 115, 
+            "large": 160
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/ham_cheese.png", 
+        "title": "Ham & Cheese",
+        "description": "Pizza tapped with all Ham",  
+        "price": {
+            "small": 120, 
+            "large": 165
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/hawaiian.png", 
+        "title": "Hawiian Supreme",
+        "description": "Ham, Bacon, Pineapple, Mushroom, Onions & Green Bell Pepper",  
+        "price": {
+            "small": 135, 
+            "large": 175
+        }, 
+        "category": ["pizza", "bestseller"]
+    }, 
+    {
+        "img": "./imgs/pizzas/hungarian_sausage.png", 
+        "title": "Hungarian Sausage",
+        "description": "All Hungarian Sausage",  
+        "price": {
+            "small": 130, 
+            "large": 175
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/meat_lover.png", 
+        "title": "Meat Lover's",
+        "description": "Ham, Salami, Hugarian, Ground Beef, Onions & Green Bell Pepper",  
+        "price": {
+            "small": 170, 
+            "large": 220
+        }, 
+        "category": ["pizza", "bestseller"]
+    }, 
+    {
+        "img": "./imgs/pizzas/pepperoni.png", 
+        "title": "Pepperoni Supreme ",
+        "description": "Pepperoni, Bacon, Mushroom, Onions, Pineapple, Black Olives, Green Bell Pepper",  
+        "price": {
+            "small": 160, 
+            "large": 200
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/sausage_and_bacon.png", 
+        "title": "Sausage & Bacon",
+        "description": "Hungarian Sausage, Bacon & Mushroom",  
+        "price": {
+            "small": 160, 
+            "large": 200
+        }, 
+        "category": "pizza"
+    }, 
+    {
+        "img": "./imgs/pizzas/tuna.png", 
+        "title": "Tuna Melt",
+        "description": "Tuna, Pineapple, Tomatoes, Black Olives, Onions",  
+        "price": {
+            "small": 175, 
+            "large": 225
+        }, 
+        "category": "pizza"
+    },
+    {
+        "img": "./imgs/pizzas/milktea.png", 
+        "title": "Chillerz / Milktea",
+        "description": "Savor the sweetness of brown sugar syrup combined with milk, topped with creamy icecream",  
+        "price": 70, 
+        "category": "extras"
+    },
+    {
+        "img": "./imgs/pizzas/nachos.png", 
+        "title": "Biaños Nachos",
+        "description": "Cheesy, Crunchy Nachos",  
+        "price": 70, 
+        "category": "extras"
+    },
+    {
+        "img": "./imgs/pizzas/halohalo.png", 
+        "title": "Super Halo-Halo",
+        "description": "Tropical Delight in every Scoop",  
+        "price": 65, 
+        "category": "extras"
+    },
+    {
+        "img": "./imgs/pizzas/pwedges.png", 
+        "title": "Potato Wedges",
+        "description": "Crispy, Crunchy Wedges",  
+        "price": 68, 
+        "category": "extras"
+    }
+]
