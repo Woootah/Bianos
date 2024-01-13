@@ -126,6 +126,120 @@ nav {
   pointer-events: none;
 }
 
+/* Menu */
+
+/* Categories */
+.categories {
+  margin: 2rem 0; 
+}
+
+.categories button {
+  border: 2px solid var(--red); 
+  padding: 0.5rem 1.5rem;
+  margin-right: 0.5rem; 
+  background-color: transparent;
+  border-radius: 20px;
+  color:  var(--red); 
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+} 
+
+.categories .active, .categories button:hover {
+  background-color: var(--red);
+  color: var(--white); 
+}
+
+.pizza {
+  /* border: 1px solid blue;  */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem; 
+  cursor: pointer;
+}
+
+.pizzaItem {
+  border: 3px solid var(--red); 
+  padding: 1rem; 
+  position: relative;
+}
+
+.pizza-img-container {
+  display: grid;
+  place-content: center;
+  padding: 1rem 0; 
+  /* border: 1px solid violet;  */
+}
+
+.pizza-img-container img {
+  width: 150px; 
+  height: 150px; 
+}
+
+.pizza-text-container {
+  margin-top: 1rem; 
+}
+
+.pizza-text-container .title {
+  font-family: var(--font-1);
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.pizza-text-container .description {
+  font-weight: 300;
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  margin-bottom: 3rem; 
+}
+
+.pizza-text-container .price-container {
+  position:absolute; 
+  bottom: 0; 
+  right: 0; 
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 100%; 
+  padding: 1rem; 
+}
+
+.price-container .price {
+  display: flex;
+}
+
+.price-container .price p, .price-container .price span{
+  font-family: var(--font-1);
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0.2rem; 
+}
+
+.price-container .price .large {
+  /* font-weight: lighter; */
+  font-size: 1.3rem;
+  margin-top: auto;
+}
+
+.price-container .price span {
+  font-weight: lighter;
+}
+
+.price-container button {
+  background-color: var(--red);
+  border: none; 
+  padding: 5px 30px;  
+  color: var(--white); 
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.price-container button:hover {
+  background-color: var(--blue);
+  transform: scale(0.9);
+}
+
+/* Mobile Viewport */
 @media (max-width: 480px) {
   body {
     padding: 1rem 2rem;

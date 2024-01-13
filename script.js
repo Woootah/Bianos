@@ -1,4 +1,4 @@
-// slider
+// * Slider
 
 const slides = document.querySelectorAll(".slides");
 let counter = 0;
@@ -31,7 +31,8 @@ const slide = () => {
   });
 };
 
-// banner custom cursor
+// * Banner Custom Cursor
+
 const bannerCursor = document.querySelector(".bannerCursor");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
@@ -41,8 +42,6 @@ gsap.set(bannerCursor, { opacity: 0, xPercent: -50, yPercent: -50 });
 document.addEventListener("mousemove", (e) => {
   gsap.to(bannerCursor, 0.5, { x: e.clientX, y: e.clientY });
 });
-
-// console.log(mouseX);
 
 const enter = (e, image) => {
   gsap.to(bannerCursor, 0.5, {
@@ -79,11 +78,21 @@ prevBtn.addEventListener("mouseleave", (e) => {
   leave(e);
 });
 
-//Menu
+// * Menu
 
 const pizzaContainer = document.querySelector(".pizza");
 const bestSellers = document.querySelector(".bestsellers");
 const extras = document.querySelector(".extras");
+
+    // * Category Buttons
+    const buttons = document.querySelectorAll('.categories button'); 
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            document.querySelector('.categories .active').classList.remove('active'); 
+            button.classList.add('active');
+        })
+    })
 
 fetch("./pizzas.json")
   .then((res) => res.json())
@@ -92,22 +101,27 @@ fetch("./pizzas.json")
       return pizza.category && pizza.category.includes("pizza");
     });
 
-    console.log(pizzaItems); 
+    // console.log(pizzaItems);
 
-    pizzaItems.map((pizza) => {
-      pizzaContainer.innerHTML = `
-            <div>
-    <div class="img-container">
-      <img src="${pizza.img}" alt="${pizza.title}">
+    pizzaItems.forEach((pizzaItem) => {
+      pizzaContainer.innerHTML += `
+  <div class='pizzaItem'>
+    <div class="pizza-img-container">
+      <img class="pizzaPic" src="${pizzaItem.img}" alt="${pizzaItem.title}">
     </div>
-    <div class="text-container">
-      <p>${pizza.title}</p>
-      <p>${pizza.description}</p>
-      <div class="price">
-        <p>${pizza.price.small}<span>|</span>${pizza.price.large}</p>
-        <button>Choose</button>
-      </div>
+    <div class="pizza-text-container">
+      <p class='title'>${pizzaItem.title}</p>
+      <p class='description'>${pizzaItem.description}</p>
+        <div class="price-container">
+            <div class='price'>
+                <p>P${pizzaItem.price.small}</p>
+                <span>${pizzaItem.price.large? '|' : ''}</span>
+                <p class='large'>${pizzaItem.price.large? 'P' + pizzaItem.price.large : ''}</p>
+            </div>
+            <button>Choose</button>
+        </div>
     </div>
   </div>`;
     });
   });
+
