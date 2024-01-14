@@ -80,48 +80,61 @@ prevBtn.addEventListener("mouseleave", (e) => {
 
 // * Menu
 
-const pizzaContainer = document.querySelector(".pizza");
-const bestSellers = document.querySelector(".bestsellers");
-const extras = document.querySelector(".extras");
+const menuContainer = document.querySelector(".menu");
 
-    // * Category Buttons
-    const buttons = document.querySelectorAll('.categories button'); 
+// * Category Buttons
+const buttons = document.querySelectorAll(".categories button");
 
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            document.querySelector('.categories .active').classList.remove('active'); 
-            button.classList.add('active');
-        })
-    })
 
-fetch("./pizzas.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const pizzaItems = data.filter((pizza) => {
-      return pizza.category && pizza.category.includes("pizza");
-    });
 
-    // console.log(pizzaItems);
+buttons.forEach((button) => {
+  button.addEventListener("click", async (e) => {
+    const prevActiveButton = document.querySelector(".categories .active");
+    prevActiveButton && prevActiveButton.classList.remove("active");
+    button.classList.add("active");
 
-    pizzaItems.forEach((pizzaItem) => {
-      pizzaContainer.innerHTML += `
-  <div class='pizzaItem'>
-    <div class="pizza-img-container">
-      <img class="pizzaPic" src="${pizzaItem.img}" alt="${pizzaItem.title}">
-    </div>
-    <div class="pizza-text-container">
-      <p class='title'>${pizzaItem.title}</p>
-      <p class='description'>${pizzaItem.description}</p>
-        <div class="price-container">
-            <div class='price'>
-                <p>P${pizzaItem.price.small}</p>
-                <span>${pizzaItem.price.large? '|' : ''}</span>
-                <p class='large'>${pizzaItem.price.large? 'P' + pizzaItem.price.large : ''}</p>
-            </div>
-            <button>Choose</button>
+    const selectedCategory = e.target.dataset.category.toLowerCase();
+    // console.log(selectedCategory); 
+
+  try{
+    const response = await fetch("./pizzas.json"); 
+    const data = await response.json(); 
+    const filteredMenuItems = data.filter((menuItem) =>
+                  Array.isArray(menuItem.category)
+                    ? menuItem.category.includes(selectedCategory)
+                    : menuItem.category === selectedCategory
+                );
+  
+      menuContainer.innerHTML = ""; 
+      filteredMenuItems.forEach((menuItem) => {
+        menuContainer.innerHTML += `
+      <div class='menuItem'>
+        <div class="menu-img-container">
+          <img class="menuPic" src="${menuItem.img}" alt="${menuItem.title}">
         </div>
-    </div>
-  </div>`;
-    });
+        <div class="menu-text-container">
+          <p class='title'>${menuItem.title}</p>
+          <p class='description'>${menuItem.description}</p>
+            <div class="price-container">
+                <div class='price'>
+                    <p>P${menuItem.price.small? menuItem.price.small : menuItem.price}</p>
+                    <span>${menuItem.price.large ? "|" : ""}</span>
+                    <p class='large'>${
+                      menuItem.price.large ? "P" + menuItem.price.large : ""
+                    }</p>
+                </div>
+                <button>Choose</button>
+            </div>
+        </div>
+      </div>`;
+      });
+  } catch (error) {
+    console.error("Error fetching menu items: ", error.message);
+  }
+
   });
+});
+
+const defaultCategoryButton = document.querySelector(".pizzas-cat");
+defaultCategoryButton.click();
 

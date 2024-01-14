@@ -81,21 +81,19 @@
             <div class="next-btn"></div>
           </div>
           <img src="./imgs/banners/banners-01.jpg" class="slides" alt="ad-banner">
-          <img src="./imgs/banners/banners-02.jpg" class="slides" alt="ad-banner">
           <img src="./imgs/banners/banners-03.jpg" class="slides" alt="ad-banner">
+          <img src="./imgs/banners/banners-02.jpg" class="slides" alt="ad-banner">
           <img src="./imgs/banners/banners-04.jpg" class="slides" alt="ad-banner">
         </div>
       </div>
       <div class="menu-container">
-        <div class="categories">
-          <button class="pizzas-cat active">Pizza</button>
-          <button class="bestsellers-cat">Bestsellers</button>
-          <button class="extras-cat">Extras</button>
-        </div>
-        
-        <div class="item pizza"></div>
-        <div class="item bestsellers"></div>
-        <div class="item extras"></div>
+        <ul class="categories">
+          <li><button class="pizzas-cat active" data-category="pizza">Pizza</button></li>
+          <li><button class="bestsellers-cat" data-category="bestseller">Bestsellers</button></li>
+          <li><button class="extras-cat" data-category="extras">Extras</button></li>
+        </ul>
+
+        <div class="menu"></div>
       </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>

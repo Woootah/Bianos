@@ -1,5 +1,6 @@
 /* Imports */
-@import url(https://db.onlinewebfonts.com/c/0d7c90bf2d5c8dcc4fa27a5ba6cbad81?family=Mango+Grotesque);
+@import url(https://db.onlinewebfonts.com/c/7957c2c3f4328bc7d8ebe2b6117a0838?family=Mango+Grotesque+Light+Ita);
+@import url(https://db.onlinewebfonts.com/c/21a15c1e713f0e2c223026848f7df74a?family=Mango+Grotesque+SemBd+Ita);
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 /* Customs */
@@ -8,8 +9,9 @@
   --red: #f4430f;
   --blue: #87b2c4;
   --black: #333333;
-  --font-1: "Mango Grotesque";
-  --font-2: "Poppins";
+  --font-1: "Mango Grotesque Light Ita";
+  --font-2: "Mango Grotesque SemBd Ita";
+  --font-3: "Poppins";
 }
 
 * {
@@ -20,7 +22,7 @@
 
 body {
   background-color: var(--white);
-  font-family: var(--font-2);
+  font-family: var(--font-3);
   font-weight: 400;
   color: var(--red);
   padding: 2rem 4rem;
@@ -94,7 +96,7 @@ nav {
 
 .navbuttons {
   width: 100%; 
-  height: 100%; 
+  height: 90%; 
   /* border: 1px solid blue;  */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -133,6 +135,10 @@ nav {
   margin: 2rem 0; 
 }
 
+.categories li {
+  display: inline-block;
+}
+
 .categories button {
   border: 2px solid var(--red); 
   padding: 0.5rem 1.5rem;
@@ -150,7 +156,7 @@ nav {
   color: var(--white); 
 }
 
-.pizza {
+.menu {
   /* border: 1px solid blue;  */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -158,48 +164,50 @@ nav {
   cursor: pointer;
 }
 
-.pizzaItem {
+.menuItem {
   border: 3px solid var(--red); 
   padding: 1rem; 
   position: relative;
+  /* height: 26rem;  */
 }
 
-.pizza-img-container {
+.menu-img-container {
   display: grid;
   place-content: center;
   padding: 1rem 0; 
   /* border: 1px solid violet;  */
 }
 
-.pizza-img-container img {
+.menu-img-container img {
   width: 150px; 
   height: 150px; 
+  object-fit: contain;
 }
 
-.pizza-text-container {
-  margin-top: 1rem; 
+.menu-text-container {
+  margin-top: 0.5rem; 
 }
 
-.pizza-text-container .title {
-  font-family: var(--font-1);
+.menu-text-container .title {
+  font-family: var(--font-2);
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-.pizza-text-container .description {
+.menu-text-container .description {
   font-weight: 300;
   font-size: 0.8rem;
   padding: 0.5rem 0;
-  margin-bottom: 3rem; 
+  margin-bottom: 4rem;
 }
 
-.pizza-text-container .price-container {
+.menu-text-container .price-container {
   position:absolute; 
   bottom: 0; 
   right: 0; 
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   width: 100%; 
   padding: 1rem; 
 }
@@ -208,11 +216,16 @@ nav {
   display: flex;
 }
 
-.price-container .price p, .price-container .price span{
-  font-family: var(--font-1);
+.price-container .price p {
+  font-family: var(--font-2);
   font-size: 2rem;
-  font-weight: 500;
   margin: 0 0.2rem; 
+  font-weight: lighter; 
+}
+
+.price-container .price span {
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
 .price-container .price .large {
@@ -228,7 +241,7 @@ nav {
 .price-container button {
   background-color: var(--red);
   border: none; 
-  padding: 5px 30px;  
+  padding: 8px 30px;  
   color: var(--white); 
   cursor: pointer;
   transition: 200ms ease-in-out;
@@ -257,7 +270,43 @@ nav {
   .logo img {
     width: 100px;
   }
+
   .navlinks {
     display: none;
   }
+
+  .banner-container {
+    width: 100%; 
+    /* border: 1px solid red;  */
+    position: relative;
+    overflow: hidden;
+    height:200px;
+    margin-top: 2rem; 
+  }
+
+  .navbuttons {
+    width: 100%; 
+    height: 90%; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    cursor: none;
+    /* border: 1px solid blue;  */
+  }
+
+  .bannerCursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    /* border: 2px solid var(--black); */
+    /* background-color: var(--white); */
+    z-index: 999;
+    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+  }
+  
 }
