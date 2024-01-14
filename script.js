@@ -138,3 +138,23 @@ buttons.forEach((button) => {
 const defaultCategoryButton = document.querySelector(".pizzas-cat");
 defaultCategoryButton.click();
 
+
+// * Footer
+
+const cursor = document.querySelector('.uruta-cursor'); 
+const copyright = document.querySelector('.copyright span'); 
+const footer = document.querySelector('footer'); 
+
+gsap.set(cursor, {xPercent: -100, yPercent: -200, opacity: 0});
+
+footer.addEventListener('mousemove', (e) => {
+  gsap.to(cursor, 0.5, {x:e.clientX, y:e.clientY, delay:0.1})
+})
+
+copyright.addEventListener('mouseenter', () => {
+  gsap.to(cursor, 0.6, {scale: 1, opacity: 1, ease: 'power4.inOut'}); 
+})
+
+copyright.addEventListener('mouseleave', (e) => {
+  gsap.to(cursor, 0.6, {scale: 0, opacity: 0, ease: 'power4.inOut'}); 
+})

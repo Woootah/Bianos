@@ -14,6 +14,18 @@
   --font-3: "Poppins";
 }
 
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--red);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +37,9 @@ body {
   font-family: var(--font-3);
   font-weight: 400;
   color: var(--red);
+}
+
+.contents {
   padding: 2rem 4rem;
   position: relative; 
 }
@@ -84,6 +99,40 @@ nav {
   margin-top: 1rem;
   border: 1px solid var(--red);
 }
+
+/* Contact Section */
+.content-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  font-family: var(--font-2);
+  padding: 2rem; 
+  width: 100vw; 
+  height: 100vh; 
+}
+
+.content-container p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 5rem;
+}
+
+.content-container h1 {
+  margin-top: auto;
+  font-size: 20rem;
+  justify-self: center;
+  text-decoration: underline;
+}
+
+.content-container p a span {
+  margin-right: 0.5rem;
+}
+
+.content-container p a {
+  margin-top: auto;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
 
 .banner-container {
   width: 100%; 
@@ -252,10 +301,92 @@ nav {
   transform: scale(0.9);
 }
 
+/* Footer */
+footer {
+  background-color: var(--black);
+  margin-top: 4rem; 
+  width: 100%; 
+  padding: 5rem 4rem; 
+  font-weight: lighter;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.footer-container .footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  line-height: 3rem;
+}
+
+.footer-links li a {
+  text-decoration: none ;
+  color: var(--white); 
+  transition: 200ms ease-in-out;
+}
+
+.footer-links li a:hover {
+  font-style: italic ;
+  color: var(--blue); 
+  font-weight: 400;
+}
+
+.footer-container .contact {
+  justify-self: end;
+  cursor: pointer;
+}
+
+.contact h2 {
+  font-family: var(--font-2);
+  font-size: 5rem;
+}
+
+.contact p {
+  color: var(--white); 
+  line-height: 2rem;
+}
+
+.uruta-cursor {
+  width: 200px; 
+  height: 280px; 
+  position: absolute;
+  top: 10%; 
+  left: 10%; 
+  background-image: url('./imgs/uruta.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 7rem;
+  color: var(--white); 
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.copyright span {
+  text-decoration: underline;
+  transition: 300ms ease-in-out;
+}
+
+.copyright span:hover {
+  font-size: 1.3rem;
+  color: var(--red);
+  font-weight: 600;
+  opacity: 1;
+}
+
 /* Mobile Viewport */
 @media (max-width: 480px) {
-  body {
-    padding: 1rem 2rem;
+  .contents {
+    padding: 0.5rem;
   }
   nav {
     display: flex;
