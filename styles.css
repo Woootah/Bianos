@@ -37,6 +37,7 @@ body {
   font-family: var(--font-3);
   font-weight: 400;
   color: var(--red);
+  scroll-behavior: smooth;
 }
 
 .contents {
@@ -48,6 +49,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.burger {
+  display: none;
+}
+
+.exit-nav {
+  display: none;
 }
 
 .navlinks li {
@@ -231,6 +240,11 @@ nav {
   width: 150px; 
   height: 150px; 
   object-fit: contain;
+  transition: 1s ease;
+}
+
+.menu-img-container img:hover {
+  transform: rotate(360deg);
 }
 
 .menu-text-container {
@@ -388,6 +402,22 @@ footer {
   .contents {
     padding: 0.5rem;
   }
+
+  .burger {
+    display: block; 
+    cursor: pointer;
+  }
+
+  .burger .burger-line {
+    width: 25px; 
+    height: 2px; 
+    background-color: var(--red);
+    margin-bottom: 5px;
+    margin-left: 1rem; 
+  }
+
+  
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -403,7 +433,48 @@ footer {
   }
 
   .navlinks {
-    display: none;
+    opacity: 1;
+    position: fixed; 
+    top: 0; 
+    right: -100%;
+    width: 100%; 
+    height: 100vh; 
+    z-index: 1000; 
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+
+  .navlinks .exit-nav {
+    width: 50px; 
+    height: 50px; 
+    display: block;
+    position: absolute;
+    top: 1rem; 
+    left: 1rem; 
+    pointer-events: all;
+  }
+
+  .navlinks .exit-nav svg {
+    color: var(--red); 
+  }
+
+  .navlinks li {
+    margin: 2rem; 
+    font-family: var(--font-2);
+    font-size: 4rem;
+  }
+
+  .navlinks li a {
+    transition: 300ms ease-in-out;
+  }
+
+  .navlinks li a:hover {
+    text-decoration: underline;
   }
 
   .banner-container {
@@ -439,5 +510,190 @@ footer {
     background-size: cover;
     background-position: center;
   }
+
+  /* Categories */
+  .categories button {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+    margin-right: 0.2rem; 
+  } 
+
+  /* Menu */
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; 
+  }
+
+  .menuItem {
+    border: 3px solid var(--red); 
+    padding: 1rem; 
+    position: relative;
+    /* height: 26rem;  */
+  }
+  
+  .menu-img-container {
+    display: grid;
+    place-content: center;
+    padding: 0.5rem 0; 
+    /* border: 1px solid violet;  */
+  }
+  
+  .menu-img-container img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: contain;
+  }
+  
+  .menu-text-container {
+    margin-top: 0.5rem; 
+  }
+  
+  .menu-text-container .title {
+    font-family: var(--font-2);
+    font-size: 1.9rem;
+    font-weight: 400;
+  }
+  
+  .menu-text-container .description {
+    font-weight: 300;
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+    margin-bottom: 4rem;
+  }
+  
+  .menu-text-container .price-container {
+    position:absolute; 
+    bottom: 0; 
+    right: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    padding: 0.5rem; 
+  }
+  
+  .price-container .price {
+    display: flex;
+  }
+  
+  .price-container .price p {
+    font-family: var(--font-2);
+    font-size: 1.9rem;
+    margin: 0 0.2rem; 
+    font-weight: lighter; 
+  }
+  
+  .price-container .price span {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  
+  .price-container .price .large {
+    /* font-weight: lighter; */
+    font-size: 1.1rem;
+    margin-top: auto;
+  }
+  
+  .price-container .price span {
+    font-weight: lighter;
+  }
+  
+  .price-container button {
+    background-color: var(--red);
+    border: none; 
+    padding: 6px 15px;  
+    color: var(--white); 
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+  }
+  
+  .price-container button:hover {
+    background-color: var(--blue);
+    transform: scale(0.9);
+  }
+
+  /* Footer */
+footer {
+  background-color: var(--black);
+  margin-top: 4rem; 
+  width: 100%; 
+  padding: 2rem 1rem; 
+  font-weight: lighter;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.footer-container .footer-links {
+  list-style: none;
+  width: 50%; 
+}
+
+.footer-links li {
+  line-height: 2rem;
+}
+
+.footer-links li a {
+  text-decoration: none ;
+  color: var(--white); 
+  transition: 200ms ease-in-out;
+}
+
+.footer-links li a:hover {
+  font-style: italic ;
+  color: var(--blue); 
+  font-weight: 400;
+}
+
+.footer-container .contact {
+  margin-top: 3rem; 
+  cursor: pointer;
+}
+
+.contact h2 {
+  font-family: var(--font-2);
+  font-size: 3rem;
+}
+
+.contact p {
+  color: var(--white); 
+  line-height: 2rem;
+}
+
+.uruta-cursor {
+  width: 200px; 
+  height: 280px; 
+  position: absolute;
+  top: 10%; 
+  left: 10%; 
+  background-image: url('./imgs/uruta.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 7rem;
+  color: var(--white); 
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.copyright span {
+  text-decoration: underline;
+  transition: 300ms ease-in-out;
+}
+
+.copyright span:hover {
+  font-size: 1.3rem;
+  color: var(--red);
+  font-weight: 600;
+  opacity: 1;
+}
+  
   
 }

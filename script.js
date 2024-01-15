@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger); 
+
 // * Slider
 
 const slides = document.querySelectorAll(".slides");
@@ -158,3 +160,28 @@ copyright.addEventListener('mouseenter', () => {
 copyright.addEventListener('mouseleave', (e) => {
   gsap.to(cursor, 0.6, {scale: 0, opacity: 0, ease: 'power4.inOut'}); 
 })
+
+
+// * Responsive Nav
+
+const burger = document.querySelector('.burger'); 
+const nav = document.querySelector('.navlinks');
+const exitNav = document.querySelector('.exit-nav'); 
+
+burger.addEventListener('click', () => {
+  nav.style.right = '0%'; 
+  document.body.style.overflow = 'hidden'; 
+}); 
+
+exitNav.addEventListener('click', () => {
+  nav.style.right = '-100%'; 
+  document.body.style.overflow = 'auto'; 
+})
+
+document.querySelectorAll('.navlinks li a').forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.style.right = '-100%'; 
+  document.body.style.overflow = 'auto';
+  })
+})
+
