@@ -1,5 +1,12 @@
 gsap.registerPlugin(ScrollTrigger); 
 
+// * Loader
+const loader = document.querySelector('.loader'); 
+
+window.addEventListener('load', () => {
+  loader.classList.add('loader-hidden'); 
+})
+
 // * Slider
 
 const slides = document.querySelectorAll(".slides");
