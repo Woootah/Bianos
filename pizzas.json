@@ -99,7 +99,7 @@
     }, 
     {
         "img": "./imgs/pizzas/meat_lover.png", 
-        "title": "Meat Lover's",
+        "title": "Meat Lover",
         "description": "Ham, Salami, Hugarian, Ground Beef, Onions & Green Bell Pepper",  
         "price": {
             "small": 170, 
