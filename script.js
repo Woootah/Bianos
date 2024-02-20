@@ -1,4 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
 
 // * Loader
 const loader = document.querySelector(".loader");
@@ -217,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const submitBtn = e.target.closest(".custom-pizza");
       
       if(submitBtn) {
-        submit(); 
+        // submit(); 
       }
     })
   }  

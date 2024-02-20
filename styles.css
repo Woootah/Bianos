@@ -9,9 +9,8 @@
   --red: #f4430f;
   --blue: #87b2c4;
   --black: #333333;
-  --font-1: "Mango Grotesque Light Ita";
-  --font-2: "Mango Grotesque SemBd Ita";
-  --font-3: "Poppins";
+  --font-1: "Mango Grotesque SemBd Ita";
+  --font-2: "Poppins";
 }
 
 ::-webkit-scrollbar {
@@ -38,7 +37,7 @@ html {
 
 body {
   background-color: var(--white);
-  font-family: var(--font-3);
+  font-family:var(--font-2);
   font-weight: 400;
   color: var(--red);
 }
@@ -146,7 +145,7 @@ nav {
 .content-container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   padding: 2rem;
   width: 100vw;
   height: 100vh;
@@ -285,7 +284,7 @@ nav {
 }
 
 .menu-text-container .title {
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 2.5rem;
   font-weight: 400;
 }
@@ -313,7 +312,7 @@ nav {
 }
 
 .price-container .price p {
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 2rem;
   margin: 0 0.2rem;
   font-weight: lighter;
@@ -403,7 +402,7 @@ nav {
 
 .modalContent .menuItemTextContainer h2 {
   font-size: 3rem;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
 }
 
 .modalContent .menuItemTextContainer p {
@@ -495,7 +494,7 @@ footer {
 }
 
 .contact h2 {
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 5rem;
 }
 
@@ -559,7 +558,7 @@ footer {
   .content-container {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    font-family: var(--font-2);
+    font-family: var(--font-1);
     padding: 2rem;
     width: 100vw;
     height: 100vh;
@@ -649,7 +648,7 @@ footer {
 
   .navlinks li {
     margin: 2rem;
-    font-family: var(--font-2);
+    font-family: var(--font-1);
     font-size: 4rem;
   }
 
@@ -733,7 +732,7 @@ footer {
   }
 
   .menu-text-container .title {
-    font-family: var(--font-2);
+    font-family: var(--font-1);
     font-size: 1.9rem;
     font-weight: 400;
   }
@@ -761,7 +760,7 @@ footer {
   }
 
   .price-container .price p {
-    font-family: var(--font-2);
+    font-family: var(--font-1);
     font-size: 1.9rem;
     margin: 0 0.2rem;
     font-weight: lighter;
@@ -852,7 +851,7 @@ footer {
 
 .modalContent .menuItemTextContainer h2 {
   font-size: 1.9rem;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
 }
 
 .modalContent .menuItemTextContainer p {
@@ -921,7 +920,7 @@ footer {
   }
 
   .contact h2 {
-    font-family: var(--font-2);
+    font-family: var(--font-1);
     font-size: 3rem;
   }
 
